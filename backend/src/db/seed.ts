@@ -8,7 +8,7 @@ const db = drizzle(sqlite);
 async function seed() {
   console.log('🌱 Seeding database...');
 
-  // Ensure tables exist
+  // Ensure tables exist with exact schema matching schema.ts
   sqlite.exec(`
     CREATE TABLE IF NOT EXISTS projects (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -17,7 +17,8 @@ async function seed() {
       image_url TEXT NOT NULL,
       github_link TEXT,
       live_link TEXT,
-      tags TEXT NOT NULL
+      tags TEXT NOT NULL,
+      created_at INTEGER
     );
     CREATE TABLE IF NOT EXISTS experiences (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,16 +26,22 @@ async function seed() {
       company TEXT NOT NULL,
       duration TEXT NOT NULL,
       description TEXT NOT NULL,
-      type TEXT NOT NULL
+      type TEXT NOT NULL,
+      created_at INTEGER
     );
     CREATE TABLE IF NOT EXISTS messages (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
       email TEXT NOT NULL,
       message TEXT NOT NULL,
-      created_at TEXT DEFAULT (datetime('now'))
+      created_at INTEGER
     );
   `);
+
+  // Ensure created_at columns exist if tables were created previously
+  try { sqlite.exec('ALTER TABLE projects ADD COLUMN created_at INTEGER;'); } catch {}
+  try { sqlite.exec('ALTER TABLE experiences ADD COLUMN created_at INTEGER;'); } catch {}
+  try { sqlite.exec('ALTER TABLE messages ADD COLUMN created_at INTEGER;'); } catch {}
 
   // Clear existing data
   console.log('Clearing old entries...');
