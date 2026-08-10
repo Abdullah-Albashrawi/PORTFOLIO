@@ -16,8 +16,8 @@ async function bootstrap() {
         transform: true,
     }));
     const port = process.env.PORT ?? 5001;
-    await app.listen(port);
-    console.log(`🚀 Backend is running on: http://localhost:${port}/api`);
+    await app.listen(port, '0.0.0.0');
+    console.log(`🚀 Backend is running on port ${port}`);
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

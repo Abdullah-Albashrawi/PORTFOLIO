@@ -3,7 +3,7 @@ services:
     name: portfolio-backend
     runtime: node
     buildCommand: pnpm install && pnpm build && pnpm db:seed
-    startCommand: pnpm build && pnpm start:prod
+    startCommand: node dist/src/main.js
     envVars:
       - key: PORT
         value: 10000
