@@ -84,26 +84,22 @@ export default function TechStack() {
       ],
     },
     {
-      name: 'Real-time & Caching',
+      name: 'Real-time Messaging',
       icon: <Zap className="w-6 h-6" />,
-      description: 'Performance & Messaging',
+      description: 'Live Connections & WebSockets',
       technologies: [
         { name: 'WebSockets', logo: 'https://cdn.simpleicons.org/socketdotio/ffffff' },
-        { name: 'Redis', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg' },
       ],
     },
     {
-      name: 'DevOps & Deployment',
+      name: 'DevOps & Cloud',
       icon: <Wrench className="w-6 h-6" />,
       description: 'Development, Cloud & Deployment',
       technologies: [
         { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
-        { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
-        { name: 'CI/CD', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' },
         { name: 'Vercel', logo: 'https://cdn.simpleicons.org/vercel/ffffff' },
         { name: 'Render', logo: 'https://cdn.simpleicons.org/render/46E3B7' },
         { name: 'Railway', logo: 'https://cdn.simpleicons.org/railway/ffffff' },
-        { name: 'pnpm', logo: 'https://cdn.simpleicons.org/pnpm/F69220' },
       ],
     },
   ];
