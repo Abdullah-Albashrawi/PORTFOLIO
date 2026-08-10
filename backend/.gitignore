@@ -1,0 +1,14 @@
+# AI Agent & Claude files
+.agents/
+AGENTS.md
+CLAUDE.md
+.claude/
+.gemini/
+
+# Node dependencies & build output
+node_modules/
+dist/
+*.log
+sqlite.db
+.DS_Store
+.env*

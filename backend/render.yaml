@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: portfolio-backend
+    runtime: node
+    buildCommand: pnpm install && pnpm build && pnpm db:seed
+    startCommand: pnpm start:prod
+    envVars:
+      - key: PORT
+        value: 10000
