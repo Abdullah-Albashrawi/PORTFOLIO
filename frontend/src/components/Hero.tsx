@@ -126,14 +126,17 @@ export default function Hero() {
               Explore My Work
               <ArrowRight className="w-4.5 h-4.5" />
             </a>
-            <button
-              disabled
-              className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-border/60 bg-muted/30 text-muted-foreground/60 font-medium cursor-not-allowed text-sm shadow-sm opacity-70"
-              title="Resume coming soon - Abdullah will upload it shortly"
+            <a
+              href="/Abdullah_Albashrawi_CV.pdf"
+              download="Abdullah Albashrawi CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass border border-border hover:border-primary/50 text-foreground font-medium transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer text-sm shadow-sm"
+              title="Download Abdullah Albashrawi CV"
             >
-              <Download className="w-4.5 h-4.5" />
-              <span>Download CV (Coming Soon)</span>
-            </button>
+              <Download className="w-4.5 h-4.5 text-primary" />
+              <span>Download CV</span>
+            </a>
             <a
               href="#contact"
               className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass text-foreground border border-border hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer text-sm"

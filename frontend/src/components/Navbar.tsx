@@ -84,14 +84,17 @@ export default function Navbar() {
             ))}
           </div>
 
-          <button
-            disabled
-            className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-border/60 bg-muted/30 text-muted-foreground/60 text-xs font-semibold cursor-not-allowed shadow-sm opacity-70"
-            title="Resume coming soon - Abdullah will upload it shortly"
+          <a
+            href="/Abdullah_Albashrawi_CV.pdf"
+            download="Abdullah Albashrawi CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary hover:bg-primary/20 text-xs font-semibold shadow-sm transition-all duration-300 transform hover:-translate-y-0.5"
+            title="Download Abdullah Albashrawi Resume"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Resume (Soon)</span>
-          </button>
+            <span>Resume</span>
+          </a>
 
           <button
             onClick={toggleTheme}
